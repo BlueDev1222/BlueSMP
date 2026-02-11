@@ -1,1 +1,194 @@
-wow
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlueSMP | Minecraft SMP</title>
+
+<style>
+:root {
+    --bg: #020617;
+    --card: #0f172a;
+    --accent: #38bdf8;
+    --accent2: #22d3ee;
+    --text: #e5e7eb;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(180deg, #020617, #020024);
+    color: var(--text);
+    text-align: center;
+}
+
+header {
+    padding: 40px 20px;
+}
+
+header img {
+    width: 220px;
+    max-width: 85%;
+}
+
+header h1 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    color: var(--accent);
+    margin: 15px 0 5px;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.card {
+    background: var(--card);
+    margin: 20px auto;
+    padding: 24px;
+    max-width: 900px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+}
+
+.card h2 {
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.info {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.ip-box {
+    background: #020617;
+    padding: 14px;
+    border-radius: 12px;
+    margin: 10px 0;
+    font-size: 1.05rem;
+    color: var(--accent2);
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+button, .discord {
+    border: none;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.copy {
+    background: linear-gradient(135deg, #38bdf8, #22d3ee);
+    color: #020617;
+    font-weight: bold;
+}
+
+.copy:hover {
+    transform: scale(1.05);
+}
+
+.discord {
+    background: #5865F2;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.discord:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #64748b;
+    border-top: 1px solid #0f172a;
+    margin-top: 40px;
+}
+
+/* 📱 Mobile Tweaks */
+@media (max-width: 600px) {
+    .card {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button, .discord {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="BlueSMP Logo">
+    <h1>BlueSMP</h1>
+    <p>Survival Multiplayer • Java & Bedrock</p>
+</header>
+
+<div class="card">
+    <h2>🔌 Connection Info</h2>
+    <div class="info">
+        🟢 <strong>Java IP</strong>
+        <div class="ip-box" id="ip">bluesmp.apexmc.co</div>
+
+        🟢 <strong>Bedrock IP</strong>
+        <div class="ip-box">bluesmp.apexmc.co</div>
+
+        🔌 <strong>Port</strong>
+        <div class="ip-box">25565</div>
+
+        🎮 <strong>Versions</strong><br>
+        All versions<br>
+        <strong>1.21.7 — 1.21.11</strong>
+    </div>
+
+    <div class="buttons">
+        <button class="copy" onclick="copyIP()">📋 Copy IP</button>
+        <a class="discord" href="https://discord.gg/nsytkSFnKx" target="_blank">
+            🌐 Join Discord
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <h2>✨ Features</h2>
+    <div class="info">
+        • Vanilla-style Survival SMP<br>
+        • Java & Bedrock support<br>
+        • Anti-cheat protection<br>
+        • Friendly community<br>
+        • No pay-to-win
+    </div>
+</div>
+
+<footer>
+    © 2026 BlueSMP. All rights reserved.<br>
+    Minecraft is a trademark of Mojang Studios.
+    This server is not affiliated with Mojang or Microsoft.
+</footer>
+
+<script>
+function copyIP() {
+    navigator.clipboard.writeText("bluesmp.apexmc.co");
+    alert("✅ IP copied to clipboard!");
+}
+</script>
+
+</body>
+</html>
